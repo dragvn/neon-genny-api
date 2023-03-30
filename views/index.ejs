@@ -18,10 +18,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Current Rappers</h1>
-    <ul class="rappers">
+    <h1>Neon Genny API</h1>
+    <ul class="characters">
     <% for(let i=0; i < info.length; i++) {%>
-        <li class="rapper">
+        <li class="character">
             <span><%= info[i].stageName %></span>
             <span><%= info[i].birthName %></span>
             <span><%= info[i].likes %></span>
@@ -31,11 +31,15 @@
     <% } %>
     </ul>
 
-    <h2>Add A Rapper:</h2>
+    <h2>Add a character:</h2>
 
-    <form action="/addRapper" method="POST">
-        <input type="text" placeholder="Stage Name" name="stageName">
-        <input type="text" placeholder="Birth Name" name="birthName">
+    <form action="/addCharacter" method="POST">
+        <input type="text" placeholder="Name" name="name">
+        <input type="text" placeholder="Age" name="age">
+        <input type="text" placeholder="Date of birth" name="dateOfBirth">
+        <input type="text" placeholder="Height in cm" name="height">
+        <input type="text" placeholder="Title" name="title">
+        <input type="text" placeholder="Quote" name="quote">
         <input type="submit">
     </form>
     

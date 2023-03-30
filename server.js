@@ -7,7 +7,7 @@ require('dotenv').config()
 
 let db,
     dbConnectionStr = process.env.DB_STRING,
-    dbName = 'rap'
+    dbName = 'genny-data'
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
     .then(client => {
@@ -29,11 +29,17 @@ app.get('/',(request, response)=>{
     .catch(error => console.error(error))
 })
 
-app.post('/addRapper', (request, response) => {
-    db.collection('rappers').insertOne({stageName: request.body.stageName,
-    birthName: request.body.birthName, likes: 0})
+app.post('/addCharacter', (request, response) => {
+    db.collection('characters').insertOne({
+        name: request.body.name,
+        age: request.body.age, 
+        dob: request.body.dateOfBirth, 
+        height: request.body.height,
+        title: request.body.title,
+        quote: request.body.quote
+    })
     .then(result => {
-        console.log('Rapper Added')
+        console.log(`Character ${request.body.name} Added`)
         response.redirect('/')
     })
     .catch(error => console.error(error))
