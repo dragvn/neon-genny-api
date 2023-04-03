@@ -28,6 +28,13 @@ app.get('/',(request, response)=>{
     })
     .catch(error => console.error(error))
 })
+app.get('/find',(request, response)=>{
+    db.collection('characters').find().toArray()
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => console.error(error))
+})
 
 app.post('/addCharacter', (request, response) => {
     db.collection('characters').insertOne({
