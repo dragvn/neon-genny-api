@@ -18,18 +18,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Neon Genny API</h1>
+    <div class="wrapper">
+        <img src="./assets/nerv_only.png">
+        <h1>Personel File Access</h1>
+        <form class="login" action="/addCharacter" method="POST">
+            <input class ="input" type="text" name="name">
+        </form>
+        <input class ="submit" type="submit" value="Search">
+        <img class="top_secret" src="./assets/top_secret.png">
+    </div>
+    
+    <!-- FOR DEV -->
+    <!-- <h1>Neon Genny API</h1>
     <ul class="characters">
     <% for(let i=0; i < info.length; i++) {%>
         <li class="character">
             <ul>Name: <%= info[i].name %></ul>
             <ul>Age: <%= info[i].age %></ul>
             <span><%= info[i].likes %></span>
-            <!--<span class='fa fa-thumbs-up'></span>-->
-            <!--<span class='fa fa-trash'></span>-->
         </li>
     <% } %>
     </ul>
+
+
 
     <h2>Add a character:</h2>
 
@@ -41,7 +52,7 @@
         <input type="text" placeholder="Title" name="title">
         <input type="text" placeholder="Quote" name="quote">
         <input type="submit">
-    </form>
+    </form> -->
     
 
     <script src='js/main.js'></script>
