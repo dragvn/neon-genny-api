@@ -22,16 +22,13 @@ app.use(express.json())
 
 
 app.get('/',(request, response)=>{
-    db.collection('characters').find().sort({likes: -1}).toArray()
-    .then(data => {
-        response.render('index.ejs', { info: data })
-    })
-    .catch(error => console.error(error))
+        response.render('index.ejs')
 })
 app.get('/find',(request, response)=>{
-    db.collection('characters').find().toArray()
+    db.collection('characters').findOne({'name': request.param('name')})
     .then(data => {
-        console.log(data)
+         console.log(data)
+         response.render('personel.ejs')
     })
     .catch(error => console.error(error))
 })
@@ -50,33 +47,6 @@ app.post('/addCharacter', (request, response) => {
         response.redirect('/')
     })
     .catch(error => console.error(error))
-})
-
-app.put('/addOneLike', (request, response) => {
-    db.collection('characters').updateOne({stageName: request.body.stageNameS, birthName: request.body.birthNameS,likes: request.body.likesS},{
-        $set: {
-            likes:request.body.likesS + 1
-          }
-    },{
-        sort: {_id: -1},
-        upsert: true
-    })
-    .then(result => {
-        console.log('Added One Like')
-        response.json('Like Added')
-    })
-    .catch(error => console.error(error))
-
-})
-
-app.delete('/deleteCharacter', (request, response) => {
-    db.collection('characters').deleteOne({stageName: request.body.stageNameS})
-    .then(result => {
-        console.log('Character Deleted')
-        response.json('Character Deleted')
-    })
-    .catch(error => console.error(error))
-
 })
 
 app.listen(process.env.PORT || PORT, ()=>{

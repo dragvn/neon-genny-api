@@ -5,20 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="wrapper">
         <img src="./assets/nerv_only.png">
         <h1>Personel File Access</h1>
-        <form class="login" action="/addCharacter" method="POST">
+        <form class="login" action="/find" method="GET">
             <input class ="input" type="text" name="name">
+            <input class ="submit" type="submit" value="Search">
         </form>
-        <input class ="submit" type="submit" value="Search">
-        <img class="top_secret" src="./assets/top_secret.png">
+        
+        <!-- <img class="top_secret" src="./assets/top_secret.png"> -->
     </div>
-    <!-- <div class="top">
-        <img src="./assets/nerv_only.png">
-    </div> -->
+    
+
+    
+
+    <script src='js/main.js'></script>
 </body>
 </html>
