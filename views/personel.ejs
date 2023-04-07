@@ -9,10 +9,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <div class="wrapper">
-        <img class="top_secret" src="./assets/top_secret.png">
+<body class="body-personel">
+    <div class="personel-wrapper">
+        <!-- <img class="top_secret" src="./assets/top_secret.png"> -->
+        <div class="upper">
+            <div class="box-1">
+                <p><span class="bold">Name: </span><span class="name"><%= info.name %></span></p>
+                <p><span class="bold">Title: </span><span><%= info.title %></span></p>
+                <p><span class="bold">Age: </span><span><%= info.age %></span></p>
+                <p><span class="bold">D.O.B: </span><span><%= info.dob %></span></p>
+                <p><span class="bold">Height: </span><span><%= info.height %></span></p>
+                <p><span class="bold">Quote: </span><span>'<%= info.quote %>'</span></p>
+
+            </div>
+            <div class="box-2">
+                <img class="personel-img" src="<%=info.img%>">
+            </div>
+        </div>
+
     </div>
+    <form class="login" action="/find" method="GET">
+        <input class ="input" type="text" name="name">
+        <input class ="submit" type="submit" value="Search">
+    </form>
+
+
     <script src='js/main.js'></script>
 </body>
 </html>
