@@ -22,13 +22,14 @@ app.use(express.json())
 
 
 app.get('/',(request, response)=>{
+    db.collection('rappers').find().toArray()
         response.render('index.ejs')
 })
 app.get('/find',(request, response)=>{
-    db.collection('characters').findOne({'name': request.param('name')})
+    db.collection('characters').findOne({name: request.query.name.toLowerCase()})
     .then(data => {
          console.log(data)
-         response.render('personel.ejs')
+         response.render('personel.ejs', {info: data})
     })
     .catch(error => console.error(error))
 })
@@ -53,4 +54,10 @@ app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
 })
 
+Object.defineProperty(String.prototype, 'capitalize', {
+    value: function() {
+      return this.charAt(0).toUpperCase() + this.slice(1);
+    },
+    enumerable: false
+  });
 // did it work this time
