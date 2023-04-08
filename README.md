@@ -7,6 +7,9 @@ Fetches data from mongodb, uses ejs to put the desired info into the dom.
 
 <img width="1435" alt="NERV_main" src="https://user-images.githubusercontent.com/98482302/230743594-94b79e54-1443-4d6f-8dd2-5160e5f2291b.png">
 
+<img width="1437" alt="gendo" src="https://user-images.githubusercontent.com/98482302/230743663-05523bc4-27b9-4c69-ab71-388aaa3e00fd.png">
+
+
 
 ## Authors
 
