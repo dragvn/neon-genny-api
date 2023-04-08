@@ -5,7 +5,7 @@ Database of NERV personel that can be searched by entering the first and last na
 
 Fetches data from mongodb, uses ejs to put the desired info into the dom. 
 
-
+<img width="1435" alt="NERV_main" src="https://user-images.githubusercontent.com/98482302/230743594-94b79e54-1443-4d6f-8dd2-5160e5f2291b.png">
 
 
 ## Authors
