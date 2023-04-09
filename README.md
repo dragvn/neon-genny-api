@@ -26,11 +26,11 @@ Current:
 
     -search is not case sensitive
 
+Future:
+
     -mobile optimized
 
     -async fetch
-
-Future:
 
     -additional personel
 
