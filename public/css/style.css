@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 3px solid blue;
 }
 html {
     background-color: black;
@@ -30,21 +31,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 55%;
 }
-.index-img {
-    height: 33vh;
-}
-.personel-wrapper {
-    margin: 1rem;
-}
+
+
 .main {
     margin: none;
 }
-.personel-img {
+img {
     max-width: 100%;
     object-fit: contain;
     border-radius: 10px;
-    filter: grayscale(1);
+}
+.personel-img {
+    filter: grayscale(1)
 }
 .top_secret {
     margin-top: 1rem;
@@ -88,7 +88,9 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    width: 75%;
+    margin: 1rem;
+    max-width: 75%;
+    
     
   
     border: 2px solid rgb(235, 33, 46);
@@ -100,9 +102,11 @@ h1 {
     display: flex;
     flex: 1;
 }
-
+.lower{
+    justify-content: center;
+    margin-top: 1rem;
+}
 .box-1, .box-2 {
-   
     border-radius: 10px;
     display: flex;
     flex: 1;
@@ -112,4 +116,22 @@ h1 {
     flex-direction: column;
     justify-content: space-around;
     padding: 1rem;
+}
+
+
+
+/* BREAK POINTS */
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 900px) {
+    .upper {
+        flex-direction: column;
+    }
+    .box-2 {
+        justify-content: center;
+    }
+    .personel-img {
+        max-width: 50%;
+    }
 }

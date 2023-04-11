@@ -26,12 +26,15 @@
                 <img class="personel-img" src="<%=info.img%>">
             </div>
         </div>
+        <div class="lower">
+            <form class="login" action="/find" method="GET">
+                <input class ="input" type="text" name="name">
+                <input class ="submit" type="submit" value="Search">
+            </form>
+        </div>
 
     </div>
-    <form class="login" action="/find" method="GET">
-        <input class ="input" type="text" name="name">
-        <input class ="submit" type="submit" value="Search">
-    </form>
+
 
 
     <script src='js/main.js'></script>
