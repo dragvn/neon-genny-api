@@ -22,7 +22,6 @@ app.use(express.json())
 
 
 app.get('/',(request, response)=>{
-    db.collection('rappers').find().toArray()
         response.render('index.ejs')
 })
 app.get('/find',(request, response)=>{
