@@ -24,15 +24,14 @@ Insert gif or link to demo
 ## Optimizations
 Current:
 
-    -search is not case sensitive
+    - search is no longer case sensitive
+    - responsive
 
 Future:
 
-    -mobile optimized
-
     -async fetch
 
-    -additional personel
+    -additional personel, functionality to make POST requests is already implemented
 
     -authentication
 ## Badges
